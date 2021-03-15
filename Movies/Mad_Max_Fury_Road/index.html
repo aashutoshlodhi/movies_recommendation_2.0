@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mad Max</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="assets/logo.png" width="100" height="100"></a>
+		<div class="toggle"><img src="../Comman_Symble/toggle.png"></div>
+	</header>
+	<div class="banner">
+		<div class="content">
+			<h2>Put On a <span>Happy</span>Face</h2>
+			<p>In a post-apocalyptic wasteland, Max, a drifter and survivor, unwillingly joins Imperator Furiosa, a rebel warrior, in a quest to overthrow a tyrant who controls the land's water supply.</p>
+			<a href="#" class="play" onclick="toggle();"><img src="../Comman_Symble/play.png">Watch Trailer</a><br><br>
+			<h3>Have You Watched Other Parts of This Movie ?<a href="./Mad_Max_Others/index.html" title=""><br><br>Yes</a></h3>
+			<div class="slide"></div>
+			<ul class="sci">
+				<li><a href="#"><img src="../Comman_Symble/bookmark.png" width="100" height="100" ></li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="trailer">
+		<video controls="true"></video>
+		<img src="../Comman_Symble/close.png" class="close" onclick="toggle();">
+	</div>
+	<script type="text/javascript">
+		function toggle()
+		{
+			var trailer = document.querySelector(".trailer");
+			var video = document.querySelector("video");
+			trailer.classList.toggle("active")
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"><img src="assets/logo.png"></a>
+		<div class="toggle"><img src="../Comman_Symble/toggle.png"></div>
+	</header>
+	<div class="banner">
+		<div class="content">
+			<h2>Put On a <span>Happy</span>Face</h2>
+			<p>The members of Monarch, an crypto-zoological organisation, must rely on the Godzilla and Mothra to defeat King Ghidorah and Rodan, after the former awakens other dormant Titans to destroy the world.</p>
+			<a href="#" class="play" onclick="toggle();"><img src="../Comman_Symble/play.png">Watch Trailer</a>
+			<div class="slide"></div>
+			<ul class="sci">
+				<li><a href="#"><img src="../Comman_Symble/bookmark.png" width="100" height="100" ></li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="trailer">
+		<video controls="true"></video>
+		<img src="../Comman_Symble/close.png" class="close" onclick="toggle();">
+	</div>
+	<script type="text/javascript">
+		function toggle()
+		{
+			var trailer = document.querySelector(".trailer");
+			var video = document.querySelector("video");
+			trailer.classList.toggle("active")
+			video.currentTime = 0;
+			video.pause();
+		}
+	</script>
+</body>
+</html>
